@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storyreel Studio — AI Kids' Video Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+<div class="app-shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 40 40" width="30" height="30">
+          <rect x="3" y="8" width="34" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="10" cy="8" r="2" fill="currentColor"/>
+          <circle cx="18" cy="8" r="2" fill="currentColor"/>
+          <circle cx="10" cy="32" r="2" fill="currentColor"/>
+          <circle cx="18" cy="32" r="2" fill="currentColor"/>
+          <path d="M16 16 L26 20 L16 24 Z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <strong>Storyreel</strong>
+        <span>Studio</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-view="dashboard">
+        <span class="ico">▦</span> Dashboard
+      </button>
+      <button class="nav-item" data-view="script">
+        <span class="ico">✎</span> Script Input
+      </button>
+      <button class="nav-item" data-view="enhance">
+        <span class="ico">✦</span> Story Enhancement
+      </button>
+      <button class="nav-item" data-view="scenes">
+        <span class="ico">▤</span> Scene Generator
+      </button>
+      <button class="nav-item" data-view="characters">
+        <span class="ico">☺</span> Character Manager
+      </button>
+      <button class="nav-item" data-view="voice">
+        <span class="ico">◔</span> AI Voice
+      </button>
+      <button class="nav-item" data-view="images">
+        <span class="ico">▧</span> Image Generation
+      </button>
+      <button class="nav-item" data-view="animation">
+        <span class="ico">▶</span> Animation
+      </button>
+      <button class="nav-item" data-view="audio">
+        <span class="ico">♪</span> Music &amp; SFX
+      </button>
+      <button class="nav-item" data-view="editor">
+        <span class="ico">✂</span> Video Editor
+      </button>
+      <button class="nav-item" data-view="settings">
+        <span class="ico">⚙</span> Video Settings
+      </button>
+      <button class="nav-item" data-view="thumbnail">
+        <span class="ico">▨</span> Thumbnails
+      </button>
+      <button class="nav-item" data-view="seo">
+        <span class="ico">#</span> SEO Generator
+      </button>
+      <button class="nav-item" data-view="export">
+        <span class="ico">⇩</span> Export
+      </button>
+      <button class="nav-item" data-view="apikeys">
+        <span class="ico">🔑</span> API Connections
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+        <span id="themeIcon">☀</span> <span id="themeLabel">Light mode</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Mobile nav toggle -->
+  <button id="mobileNavBtn" class="mobile-nav-btn">☰</button>
+
+  <!-- Main -->
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1 id="viewTitle">Dashboard</h1>
+        <p id="viewSubtitle">Your projects, at a glance.</p>
+      </div>
+      <div class="topbar-actions">
+        <div class="project-select">
+          <select id="projectSelector"></select>
+          <button id="newProjectBtn" class="btn btn-accent">+ New Project</button>
+        </div>
+        <button id="notifBtn" class="icon-btn" title="Notifications">
+          🔔<span id="notifDot" class="dot hidden"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="view-container" id="viewContainer">
+      <!-- Views injected by app.js -->
+    </div>
+  </main>
+</div>
+
+<!-- Notification panel -->
+<div id="notifPanel" class="notif-panel hidden">
+  <div class="notif-head">
+    <span>Notifications</span>
+    <button id="clearNotifs" class="link-btn">Clear</button>
+  </div>
+  <div id="notifList" class="notif-list"></div>
+</div>
+
+<!-- Toast container -->
+<div id="toastContainer" class="toast-container"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+<script src="components/state.js"></script>
+<script src="components/utils.js"></script>
+<script src="components/scriptInput.js"></script>
+<script src="components/enhance.js"></script>
+<script src="components/scenes.js"></script>
+<script src="components/characters.js"></script>
+<script src="components/voice.js"></script>
+<script src="components/images.js"></script>
+<script src="components/animation.js"></script>
+<script src="components/audio.js"></script>
+<script src="components/editor.js"></script>
+<script src="components/settings.js"></script>
+<script src="components/thumbnail.js"></script>
+<script src="components/seo.js"></script>
+<script src="components/exportView.js"></script>
+<script src="components/apikeys.js"></script>
+<script src="components/dashboard.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
